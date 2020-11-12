@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "currencies",
+  "info": {
+    "name": "Currency",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "CurrencyCode": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Name": {
+      "type": "string"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "currency_rates": {
+      "via": "to_currency_code",
+      "collection": "currency-rate"
+    }
+  }
+}

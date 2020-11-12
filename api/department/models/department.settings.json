@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "departments",
+  "info": {
+    "name": "Department",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "DepartmentID": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "Name": {
+      "type": "string"
+    },
+    "GroupName": {
+      "type": "string"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    }
+  }
+}

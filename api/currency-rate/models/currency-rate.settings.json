@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "currency_rates",
+  "info": {
+    "name": "CurrencyRate",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "CurrencyRateID": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "CurrencyRateDate": {
+      "type": "datetime"
+    },
+    "FromCurrencyCode": {
+      "model": "currency",
+      "via": "currency_rates"
+    },
+    "ToCurrencyCode": {
+      "type": "string"
+    },
+    "AverageRate": {
+      "type": "float"
+    },
+    "EndOfDayRate": {
+      "type": "float"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "to_currency_code": {
+      "model": "currency",
+      "via": "currency_rates"
+    }
+  }
+}
