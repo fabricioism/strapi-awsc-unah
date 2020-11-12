@@ -23,8 +23,12 @@
       "type": "datetime"
     },
     "currency_rates": {
-      "via": "to_currency_code",
-      "collection": "currency-rate"
+      "collection": "currency-rate",
+      "via": "FromCurrencyCode"
+    },
+    "FromCurrencyCode": {
+      "collection": "currency-rate",
+      "via": "ToCurrencyCode"
     }
   }
 }

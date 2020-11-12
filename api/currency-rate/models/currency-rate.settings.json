@@ -2,8 +2,7 @@
   "kind": "collectionType",
   "collectionName": "currency_rates",
   "info": {
-    "name": "CurrencyRate",
-    "description": ""
+    "name": "CurrencyRate"
   },
   "options": {
     "increments": true,
@@ -19,25 +18,22 @@
     "CurrencyRateDate": {
       "type": "datetime"
     },
-    "FromCurrencyCode": {
-      "model": "currency",
-      "via": "currency_rates"
-    },
-    "ToCurrencyCode": {
-      "type": "string"
-    },
     "AverageRate": {
-      "type": "float"
+      "type": "decimal"
     },
     "EndOfDayRate": {
-      "type": "float"
+      "type": "decimal"
     },
     "ModifiedDate": {
       "type": "datetime"
     },
-    "to_currency_code": {
-      "model": "currency",
-      "via": "currency_rates"
+    "FromCurrencyCode": {
+      "via": "currency_rates",
+      "model": "currency"
+    },
+    "ToCurrencyCode": {
+      "via": "FromCurrencyCode",
+      "model": "currency"
     }
   }
 }
