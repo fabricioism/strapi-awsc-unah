@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unit_measures",
+  "info": {
+    "name": "UnitMeasure"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "UnitMeasureCode": {
+      "type": "string",
+      "unique": true
+    },
+    "Name": {
+      "type": "string"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    }
+  }
+}

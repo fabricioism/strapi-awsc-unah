@@ -1,0 +1,94 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Product"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ProductID": {
+      "type": "integer",
+      "unique": true
+    },
+    "Name": {
+      "type": "string"
+    },
+    "ProductNumber": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "MakeFlag": {
+      "type": "boolean"
+    },
+    "FinishedGoodsFlag": {
+      "type": "boolean"
+    },
+    "Color": {
+      "type": "string"
+    },
+    "SafetyStockLevel": {
+      "type": "integer"
+    },
+    "ReorderPoint": {
+      "type": "integer"
+    },
+    "StandardCost": {
+      "type": "decimal"
+    },
+    "ListPrice": {
+      "type": "decimal"
+    },
+    "Size": {
+      "type": "string"
+    },
+    "SizeUnitMeasureCode": {
+      "type": "string"
+    },
+    "WeightUnitMeasureCode": {
+      "type": "string"
+    },
+    "Weight": {
+      "type": "decimal"
+    },
+    "DaysToManufacture": {
+      "type": "integer"
+    },
+    "ProductLine": {
+      "type": "string"
+    },
+    "Class": {
+      "type": "string"
+    },
+    "Style": {
+      "type": "string"
+    },
+    "product_subcategory": {
+      "model": "product-subcategory",
+      "via": "products"
+    },
+    "SellStartDate": {
+      "type": "datetime"
+    },
+    "SellEndDate": {
+      "type": "datetime"
+    },
+    "DiscontinuedDate": {
+      "type": "datetime"
+    },
+    "rowguid": {
+      "type": "string"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "product_model": {
+      "model": "product-model",
+      "via": "products"
+    }
+  }
+}
