@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "departments",
+  "collectionName": "business_entities",
   "info": {
-    "name": "Department",
+    "name": "BusinessEntity",
     "description": ""
   },
   "options": {
@@ -11,19 +11,20 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "DepartmentID": {
+    "BusinessEntityID": {
       "type": "integer",
       "required": true,
       "unique": true
     },
-    "Name": {
-      "type": "string"
-    },
-    "GroupName": {
-      "type": "string"
-    },
     "ModifiedDate": {
       "type": "datetime"
+    },
+    "rowguid": {
+      "type": "string"
+    },
+    "person": {
+      "via": "business_entity",
+      "model": "person"
     }
   }
 }

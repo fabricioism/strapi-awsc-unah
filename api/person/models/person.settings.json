@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "people",
+  "info": {
+    "name": "Person",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "PersonType": {
+      "type": "string"
+    },
+    "NameStyle": {
+      "type": "boolean"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "FirstName": {
+      "type": "string"
+    },
+    "MiddleName": {
+      "type": "string"
+    },
+    "LastName": {
+      "type": "string"
+    },
+    "Suffix": {
+      "type": "string"
+    },
+    "EmailPromotion": {
+      "type": "integer"
+    },
+    "AdditionalContactInfo": {
+      "type": "text"
+    },
+    "Demographics": {
+      "type": "text"
+    },
+    "rowguid": {
+      "type": "string",
+      "unique": true
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "business_entity": {
+      "model": "business-entity",
+      "via": "person"
+    }
+  }
+}
