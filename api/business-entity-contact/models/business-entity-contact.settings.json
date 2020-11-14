@@ -2,12 +2,13 @@
   "kind": "collectionType",
   "collectionName": "business_entity_contacts",
   "info": {
-    "name": "BusinessEntityContact"
+    "name": "BusinessEntityContact",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "rowguid": {
@@ -19,12 +20,12 @@
       "type": "datetime"
     },
     "business_entity": {
-      "via": "business_entity_contacts",
-      "model": "business-entity"
+      "model": "business-entity",
+      "via": "business_entity_contacts"
     },
     "contact_type": {
-      "model": "contact-type",
-      "via": "business_entity_contacts"
+      "via": "business_entity_contacts",
+      "model": "contact-type"
     },
     "person": {
       "model": "person",

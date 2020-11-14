@@ -2,12 +2,13 @@
   "kind": "collectionType",
   "collectionName": "phone_number_types",
   "info": {
-    "name": "PhoneNumberType"
+    "name": "PhoneNumberType",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "PhoneNumberTypeID": {
@@ -22,8 +23,8 @@
       "type": "datetime"
     },
     "person_phones": {
-      "via": "phone_number_type",
-      "collection": "person-phone"
+      "collection": "person-phone",
+      "via": "phone_number_type"
     }
   }
 }

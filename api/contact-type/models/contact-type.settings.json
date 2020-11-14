@@ -2,12 +2,13 @@
   "kind": "collectionType",
   "collectionName": "contact_types",
   "info": {
-    "name": "ContactType"
+    "name": "ContactType",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "ContactTypeID": {
@@ -22,8 +23,8 @@
       "type": "datetime"
     },
     "business_entity_contacts": {
-      "via": "contact_type",
-      "collection": "business-entity-contact"
+      "collection": "business-entity-contact",
+      "via": "contact_type"
     }
   }
 }
