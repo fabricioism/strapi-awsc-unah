@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees",
+  "info": {
+    "name": "Employee",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "NationalIDNumber": {
+      "type": "string",
+      "unique": true
+    },
+    "LoginID": {
+      "type": "string"
+    },
+    "OrganizationNode": {
+      "type": "string"
+    },
+    "OrganizationLevel": {
+      "type": "integer"
+    },
+    "JobTitle": {
+      "type": "string"
+    },
+    "BirthDate": {
+      "type": "date"
+    },
+    "MaritalStatus": {
+      "type": "string"
+    },
+    "Gender": {
+      "type": "string"
+    },
+    "HireDate": {
+      "type": "date"
+    },
+    "SalariedFlag": {
+      "type": "boolean"
+    },
+    "VacationHours": {
+      "type": "integer"
+    },
+    "SickLeaveHours": {
+      "type": "integer"
+    },
+    "CurrentFlag": {
+      "type": "integer"
+    },
+    "rowguid": {
+      "type": "string",
+      "unique": true
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "person": {
+      "model": "person",
+      "via": "employee"
+    }
+  }
+}
