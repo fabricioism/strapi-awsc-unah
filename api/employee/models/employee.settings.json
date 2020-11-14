@@ -48,9 +48,6 @@
     "SickLeaveHours": {
       "type": "integer"
     },
-    "CurrentFlag": {
-      "type": "integer"
-    },
     "rowguid": {
       "type": "string",
       "unique": true
@@ -61,6 +58,9 @@
     "person": {
       "model": "person",
       "via": "employee"
+    },
+    "CurrentFlag": {
+      "type": "boolean"
     }
   }
 }
