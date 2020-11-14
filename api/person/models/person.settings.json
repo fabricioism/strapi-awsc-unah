@@ -63,6 +63,10 @@
     "business_entity_contacts": {
       "via": "person",
       "collection": "business-entity-contact"
+    },
+    "employee": {
+      "via": "person",
+      "model": "employee"
     }
   }
 }
