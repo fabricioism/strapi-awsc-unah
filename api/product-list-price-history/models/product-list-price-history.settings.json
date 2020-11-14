@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_list_price_histories",
+  "info": {
+    "name": "ProductListPriceHistory"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "StartDate": {
+      "type": "datetime"
+    },
+    "EndDate": {
+      "type": "datetime"
+    },
+    "ListPrice": {
+      "type": "decimal"
+    },
+    "ModifiedDate": {
+      "type": "decimal"
+    },
+    "product": {
+      "model": "product",
+      "via": "product_list_price_histories"
+    }
+  }
+}

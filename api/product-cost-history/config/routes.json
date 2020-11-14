@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/product-cost-histories",
+      "handler": "product-cost-history.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/product-cost-histories/count",
+      "handler": "product-cost-history.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/product-cost-histories/:id",
+      "handler": "product-cost-history.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/product-cost-histories",
+      "handler": "product-cost-history.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/product-cost-histories/:id",
+      "handler": "product-cost-history.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/product-cost-histories/:id",
+      "handler": "product-cost-history.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

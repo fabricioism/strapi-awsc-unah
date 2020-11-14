@@ -2,12 +2,13 @@
   "kind": "collectionType",
   "collectionName": "products",
   "info": {
-    "name": "Product"
+    "name": "Product",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "ProductID": {
@@ -89,6 +90,30 @@
     "product_model": {
       "model": "product-model",
       "via": "products"
+    },
+    "product_inventories": {
+      "via": "product",
+      "collection": "product-inventory"
+    },
+    "product_cost_histories": {
+      "via": "product",
+      "collection": "product-cost-history"
+    },
+    "bill_of_materials": {
+      "via": "ComponentID",
+      "collection": "bill-of-materials"
+    },
+    "transaction_histories": {
+      "via": "product",
+      "collection": "transaction-history"
+    },
+    "product_list_price_histories": {
+      "via": "product",
+      "collection": "product-list-price-history"
+    },
+    "product_reviews": {
+      "via": "product",
+      "collection": "product-review"
     }
   }
 }

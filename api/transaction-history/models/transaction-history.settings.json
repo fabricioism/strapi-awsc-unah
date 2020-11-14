@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transaction_histories",
+  "info": {
+    "name": "TransactionHistory"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "TransactionID": {
+      "type": "integer",
+      "unique": true
+    },
+    "product": {
+      "model": "product",
+      "via": "transaction_histories"
+    },
+    "ReferenceOrderID": {
+      "type": "integer"
+    },
+    "ReferenceOrderLineID": {
+      "type": "integer"
+    },
+    "TransactionDate": {
+      "type": "datetime"
+    },
+    "TransactionType": {
+      "type": "string"
+    },
+    "Quantity": {
+      "type": "integer"
+    },
+    "ActualCost": {
+      "type": "decimal"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    }
+  }
+}

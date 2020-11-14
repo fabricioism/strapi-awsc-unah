@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "unit_measures",
+  "collectionName": "country_regions",
   "info": {
-    "name": "UnitMeasure"
+    "name": "CountryRegion"
   },
   "options": {
     "increments": true,
@@ -10,7 +10,7 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "UnitMeasureCode": {
+    "CountryRegionCode": {
       "type": "string",
       "unique": true
     },
@@ -19,10 +19,6 @@
     },
     "ModifiedDate": {
       "type": "datetime"
-    },
-    "bill_of_materials": {
-      "via": "unit_measure",
-      "collection": "bill-of-materials"
     }
   }
 }
