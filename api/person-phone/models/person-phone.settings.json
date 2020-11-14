@@ -8,7 +8,7 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "person": {
@@ -21,8 +21,8 @@
       "required": true
     },
     "phone_number_type": {
-      "model": "phone-number-type",
-      "via": "person_phones"
+      "via": "person_phones",
+      "model": "phone-number-type"
     },
     "ModifiedDate": {
       "type": "datetime"

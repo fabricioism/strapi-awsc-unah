@@ -28,8 +28,8 @@
       "via": "business_entity"
     },
     "business_entity_contacts": {
-      "collection": "business-entity-contact",
-      "via": "business_entity"
+      "via": "business_entity",
+      "collection": "business-entity-contact"
     }
   }
 }
