@@ -99,10 +99,6 @@
       "via": "product",
       "collection": "product-cost-history"
     },
-    "bill_of_materials": {
-      "via": "ComponentID",
-      "collection": "bill-of-materials"
-    },
     "transaction_histories": {
       "via": "product",
       "collection": "transaction-history"
@@ -114,6 +110,10 @@
     "product_reviews": {
       "via": "product",
       "collection": "product-review"
+    },
+    "bill_of_materials": {
+      "via": "ProductAssemblyID",
+      "collection": "bill-of-materials"
     }
   }
 }

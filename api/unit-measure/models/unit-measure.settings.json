@@ -21,7 +21,7 @@
       "type": "datetime"
     },
     "bill_of_materials": {
-      "via": "unit_measure",
+      "via": "UnitMeasureCode",
       "collection": "bill-of-materials"
     }
   }
