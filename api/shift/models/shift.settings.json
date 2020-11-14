@@ -29,9 +29,6 @@
     },
     "ModifiedDate": {
       "type": "datetime"
-    },
-    "test": {
-      "type": "string"
     }
   }
 }
