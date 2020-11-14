@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "departments",
+  "collectionName": "job_candidates",
   "info": {
-    "name": "Department",
+    "name": "JobCandidate",
     "description": ""
   },
   "options": {
@@ -11,23 +11,19 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "DepartmentID": {
+    "JobCandidateID": {
       "type": "integer",
-      "required": true,
       "unique": true
     },
-    "Name": {
-      "type": "string"
-    },
-    "GroupName": {
-      "type": "string"
+    "Resume": {
+      "type": "text"
     },
     "ModifiedDate": {
       "type": "datetime"
     },
-    "employee_department_histories": {
-      "via": "department",
-      "collection": "employee-department-history"
+    "employee": {
+      "model": "employee",
+      "via": "job_candidates"
     }
   }
 }

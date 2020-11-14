@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/employee-pay-histories",
+      "handler": "employee-pay-history.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/employee-pay-histories/count",
+      "handler": "employee-pay-history.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/employee-pay-histories/:id",
+      "handler": "employee-pay-history.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/employee-pay-histories",
+      "handler": "employee-pay-history.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/employee-pay-histories/:id",
+      "handler": "employee-pay-history.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/employee-pay-histories/:id",
+      "handler": "employee-pay-history.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
