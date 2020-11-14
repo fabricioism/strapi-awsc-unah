@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shifts",
+  "info": {
+    "name": "Shift"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ShiftID": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "Name": {
+      "type": "string",
+      "unique": true
+    },
+    "StartTime": {
+      "type": "time",
+      "unique": false
+    },
+    "EndTime": {
+      "type": "time"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    }
+  }
+}
