@@ -29,12 +29,12 @@
       "type": "datetime"
     },
     "FromCurrencyCode": {
-      "via": "FromCurrencyCode",
-      "model": "currency"
+      "model": "currency",
+      "via": "FromCurrencyCode"
     },
     "ToCurrencyCode": {
-      "via": "ToCurrencyCode",
-      "model": "currency"
+      "model": "currency",
+      "via": "ToCurrencyCode"
     }
   }
 }
