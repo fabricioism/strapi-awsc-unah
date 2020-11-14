@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_categories",
+  "info": {
+    "name": "ProductCategory"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "ProductCategoryID": {
+      "type": "integer",
+      "unique": true
+    },
+    "Name": {
+      "type": "string"
+    },
+    "rowguid": {
+      "type": "string",
+      "unique": true
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "product_subcategories": {
+      "via": "product_category",
+      "collection": "product-subcategory"
+    }
+  }
+}

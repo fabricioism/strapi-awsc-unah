@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_models",
+  "info": {
+    "name": "ProductModel"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "ProductModelID": {
+      "type": "integer",
+      "unique": true
+    },
+    "Name": {
+      "type": "string"
+    },
+    "CatalogDescription": {
+      "type": "text"
+    },
+    "Instructions": {
+      "type": "text"
+    },
+    "rowguid": {
+      "type": "string",
+      "unique": true
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "products": {
+      "via": "product_model",
+      "collection": "product"
+    }
+  }
+}

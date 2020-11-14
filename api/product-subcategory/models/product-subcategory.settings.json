@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_subcategories",
+  "info": {
+    "name": "ProductSubcategory",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "ProductSubcategoryID": {
+      "type": "integer",
+      "unique": true
+    },
+    "Name": {
+      "type": "string"
+    },
+    "rowguid": {
+      "type": "string"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "product_category": {
+      "model": "product-category",
+      "via": "product_subcategories"
+    },
+    "products": {
+      "via": "product_subcategory",
+      "collection": "product"
+    }
+  }
+}
