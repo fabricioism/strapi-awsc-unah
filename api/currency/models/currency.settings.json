@@ -22,12 +22,12 @@
     "ModifiedDate": {
       "type": "datetime"
     },
-    "FromCurrencyCode": {
-      "via": "FromCurrencyCode",
+    "Currency_FromCurrencyCodes": {
+      "via": "currency_from_currency_code",
       "collection": "currency-rate"
     },
-    "ToCurrencyCode": {
-      "via": "ToCurrencyCode",
+    "Currency_ToCurrencyCode": {
+      "via": "Currency_ToCurrencyCode",
       "collection": "currency-rate"
     }
   }
