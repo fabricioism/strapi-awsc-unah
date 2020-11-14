@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "phone_number_types",
+  "info": {
+    "name": "PhoneNumberType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "PhoneNumberTypeID": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "Name": {
+      "type": "string"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "person_phones": {
+      "via": "phone_number_type",
+      "collection": "person-phone"
+    }
+  }
+}

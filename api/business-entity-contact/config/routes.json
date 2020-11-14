@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/business-entity-contacts",
+      "handler": "business-entity-contact.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/business-entity-contacts/count",
+      "handler": "business-entity-contact.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/business-entity-contacts/:id",
+      "handler": "business-entity-contact.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/business-entity-contacts",
+      "handler": "business-entity-contact.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/business-entity-contacts/:id",
+      "handler": "business-entity-contact.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/business-entity-contacts/:id",
+      "handler": "business-entity-contact.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

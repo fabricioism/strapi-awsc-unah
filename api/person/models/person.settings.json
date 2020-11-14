@@ -49,8 +49,20 @@
       "type": "datetime"
     },
     "business_entity": {
-      "model": "business-entity",
-      "via": "person"
+      "via": "person",
+      "model": "business-entity"
+    },
+    "person_phones": {
+      "via": "person",
+      "collection": "person-phone"
+    },
+    "email_addresses": {
+      "via": "person",
+      "collection": "email-address"
+    },
+    "business_entity_contacts": {
+      "via": "person",
+      "collection": "business-entity-contact"
     }
   }
 }

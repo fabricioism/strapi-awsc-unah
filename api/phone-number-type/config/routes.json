@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/phone-number-types",
+      "handler": "phone-number-type.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/phone-number-types/count",
+      "handler": "phone-number-type.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/phone-number-types/:id",
+      "handler": "phone-number-type.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/phone-number-types",
+      "handler": "phone-number-type.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/phone-number-types/:id",
+      "handler": "phone-number-type.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/phone-number-types/:id",
+      "handler": "phone-number-type.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

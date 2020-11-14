@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "business_entity_contacts",
+  "info": {
+    "name": "BusinessEntityContact"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "rowguid": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "business_entity": {
+      "via": "business_entity_contacts",
+      "model": "business-entity"
+    },
+    "contact_type": {
+      "model": "contact-type",
+      "via": "business_entity_contacts"
+    },
+    "person": {
+      "model": "person",
+      "via": "business_entity_contacts"
+    }
+  }
+}
