@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_reviews",
+  "info": {
+    "name": "ProductReview"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "ProductReviewID": {
+      "type": "integer",
+      "unique": true
+    },
+    "ReviewerName": {
+      "type": "string"
+    },
+    "ReviewDate": {
+      "type": "datetime"
+    },
+    "EmailAddress": {
+      "type": "email"
+    },
+    "Rating": {
+      "type": "integer"
+    },
+    "Comments": {
+      "type": "text"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "product": {
+      "model": "product",
+      "via": "product_reviews"
+    }
+  }
+}

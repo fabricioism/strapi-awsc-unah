@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_inventories",
+  "info": {
+    "name": "ProductInventory"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "product": {
+      "model": "product",
+      "via": "product_inventories"
+    },
+    "location": {
+      "model": "location",
+      "via": "product_inventories"
+    },
+    "Shelf": {
+      "type": "string"
+    },
+    "Bin": {
+      "type": "integer"
+    },
+    "Quantity": {
+      "type": "integer"
+    },
+    "rowguid": {
+      "type": "string"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    }
+  }
+}

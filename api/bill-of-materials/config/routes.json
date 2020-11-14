@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bill-of-materials",
+      "handler": "bill-of-materials.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bill-of-materials/count",
+      "handler": "bill-of-materials.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bill-of-materials/:id",
+      "handler": "bill-of-materials.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bill-of-materials",
+      "handler": "bill-of-materials.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bill-of-materials/:id",
+      "handler": "bill-of-materials.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bill-of-materials/:id",
+      "handler": "bill-of-materials.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "unit_measures",
+  "collectionName": "locations",
   "info": {
-    "name": "UnitMeasure"
+    "name": "Location"
   },
   "options": {
     "increments": true,
@@ -10,19 +10,25 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "UnitMeasureCode": {
-      "type": "string",
+    "LocationID": {
+      "type": "integer",
       "unique": true
     },
     "Name": {
       "type": "string"
     },
+    "CostRate": {
+      "type": "decimal"
+    },
+    "Availability": {
+      "type": "decimal"
+    },
     "ModifiedDate": {
       "type": "datetime"
     },
-    "bill_of_materials": {
-      "via": "unit_measure",
-      "collection": "bill-of-materials"
+    "product_inventories": {
+      "via": "location",
+      "collection": "product-inventory"
     }
   }
 }

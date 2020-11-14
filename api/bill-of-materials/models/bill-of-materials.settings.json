@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bill_of_materials",
+  "info": {
+    "name": "BillOfMaterials",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "BillOfMaterialsID": {
+      "type": "integer",
+      "unique": true
+    },
+    "ProductAssemblyID": {
+      "model": "product",
+      "via": "bill_of_materials"
+    },
+    "StartDate": {
+      "type": "datetime"
+    },
+    "EndDate": {
+      "type": "datetime"
+    },
+    "UnitMeasureCode": {
+      "type": "string"
+    },
+    "BOMLevel": {
+      "type": "integer"
+    },
+    "PerAssemblyQty": {
+      "type": "decimal"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "unit_measure": {
+      "model": "unit-measure",
+      "via": "bill_of_materials"
+    },
+    "ComponentID": {
+      "model": "product",
+      "via": "bill_of_materials"
+    }
+  }
+}

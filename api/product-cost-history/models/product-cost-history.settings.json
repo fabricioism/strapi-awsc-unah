@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_cost_histories",
+  "info": {
+    "name": "ProductCostHistory"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "StartDate": {
+      "type": "datetime"
+    },
+    "EndDate": {
+      "type": "datetime"
+    },
+    "StandardCost": {
+      "type": "decimal"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "product": {
+      "model": "product",
+      "via": "product_cost_histories"
+    }
+  }
+}
