@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employee_pay_histories",
+  "info": {
+    "name": "EmployeePayHistory",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "RateChangeDate": {
+      "type": "datetime"
+    },
+    "Rate": {
+      "type": "decimal"
+    },
+    "PayFrequency": {
+      "type": "integer"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "employee": {
+      "model": "employee",
+      "via": "employee_pay_histories"
+    }
+  }
+}
