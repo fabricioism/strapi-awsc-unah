@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "person_phones",
+  "info": {
+    "name": "PersonPhone",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "person": {
+      "model": "person",
+      "via": "person_phones"
+    },
+    "PhoneNumber": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "phone_number_type": {
+      "model": "phone-number-type",
+      "via": "person_phones"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    }
+  }
+}

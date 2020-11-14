@@ -20,11 +20,16 @@
       "type": "datetime"
     },
     "rowguid": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "person": {
-      "via": "business_entity",
-      "model": "person"
+      "model": "person",
+      "via": "business_entity"
+    },
+    "business_entity_contacts": {
+      "collection": "business-entity-contact",
+      "via": "business_entity"
     }
   }
 }

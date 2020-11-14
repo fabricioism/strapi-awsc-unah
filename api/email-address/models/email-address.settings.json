@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "email_addresses",
+  "info": {
+    "name": "EmailAddress",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "EmailAddressID": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "EmailAddress": {
+      "type": "email"
+    },
+    "rowguid": {
+      "type": "string",
+      "unique": true
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "person": {
+      "model": "person",
+      "via": "email_addresses"
+    }
+  }
+}

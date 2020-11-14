@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_types",
+  "info": {
+    "name": "ContactType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ContactTypeID": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "Name": {
+      "type": "string"
+    },
+    "ModifiedDate": {
+      "type": "datetime"
+    },
+    "business_entity_contacts": {
+      "via": "contact_type",
+      "collection": "business-entity-contact"
+    }
+  }
+}
