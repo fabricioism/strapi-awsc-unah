@@ -2,8 +2,7 @@
   "kind": "collectionType",
   "collectionName": "bill_of_materials",
   "info": {
-    "name": "BillOfMaterials",
-    "description": ""
+    "name": "BillOfMaterials"
   },
   "options": {
     "increments": true,
@@ -15,10 +14,6 @@
       "type": "integer",
       "unique": true
     },
-    "ProductAssemblyID": {
-      "model": "product",
-      "via": "bill_of_materials"
-    },
     "StartDate": {
       "type": "datetime"
     },
@@ -26,7 +21,8 @@
       "type": "datetime"
     },
     "UnitMeasureCode": {
-      "type": "string"
+      "model": "unit-measure",
+      "via": "bill_of_materials"
     },
     "BOMLevel": {
       "type": "integer"
@@ -37,11 +33,11 @@
     "ModifiedDate": {
       "type": "datetime"
     },
-    "unit_measure": {
-      "model": "unit-measure",
+    "ComponentID": {
+      "model": "product",
       "via": "bill_of_materials"
     },
-    "ComponentID": {
+    "ProductAssemblyID": {
       "model": "product",
       "via": "bill_of_materials"
     }
