@@ -28,13 +28,13 @@
     "ModifiedDate": {
       "type": "datetime"
     },
-    "FromCurrencyCode": {
+    "currency_from_currency_code": {
       "model": "currency",
-      "via": "FromCurrencyCode"
+      "via": "Currency_FromCurrencyCodes"
     },
-    "ToCurrencyCode": {
+    "Currency_ToCurrencyCode": {
       "model": "currency",
-      "via": "ToCurrencyCode"
+      "via": "Currency_ToCurrencyCode"
     }
   }
 }
