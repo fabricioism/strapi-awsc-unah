@@ -36,11 +36,11 @@
     },
     "component_id": {
       "model": "product",
-      "via": "bill_of_materials"
+      "via": "bill_of_materials_component_ids"
     },
     "product_assembly_id": {
       "model": "product",
-      "via": "bill_of_materials"
+      "via": "bill_of_materials_product_assembly_id"
     }
   }
 }

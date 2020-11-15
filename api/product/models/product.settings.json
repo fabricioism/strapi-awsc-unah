@@ -111,7 +111,11 @@
       "via": "product",
       "collection": "product-review"
     },
-    "bill_of_materials": {
+    "bill_of_materials_component_ids": {
+      "via": "component_id",
+      "collection": "bill-of-materials"
+    },
+    "bill_of_materials_product_assembly_id": {
       "via": "product_assembly_id",
       "collection": "bill-of-materials"
     }
