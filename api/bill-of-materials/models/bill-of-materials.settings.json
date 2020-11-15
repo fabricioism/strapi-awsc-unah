@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "bill_of_materials",
   "info": {
-    "name": "BillOfMaterials"
+    "name": "BillOfMaterials",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -33,11 +34,11 @@
     "ModifiedDate": {
       "type": "datetime"
     },
-    "ComponentID": {
+    "component_id": {
       "model": "product",
       "via": "bill_of_materials"
     },
-    "ProductAssemblyID": {
+    "product_assembly_id": {
       "model": "product",
       "via": "bill_of_materials"
     }
