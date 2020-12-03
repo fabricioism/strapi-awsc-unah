@@ -27,8 +27,8 @@
       "type": "datetime"
     },
     "person": {
-      "model": "person",
-      "via": "email_addresses"
+      "via": "email_addresses",
+      "model": "person"
     }
   }
 }

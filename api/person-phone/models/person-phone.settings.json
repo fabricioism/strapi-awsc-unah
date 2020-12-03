@@ -12,8 +12,8 @@
   },
   "attributes": {
     "person": {
-      "model": "person",
-      "via": "person_phones"
+      "via": "person_phones",
+      "model": "person"
     },
     "PhoneNumber": {
       "type": "string",

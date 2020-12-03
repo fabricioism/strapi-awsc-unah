@@ -56,8 +56,8 @@
       "type": "datetime"
     },
     "person": {
-      "model": "person",
-      "via": "employee"
+      "via": "employee",
+      "model": "person"
     },
     "CurrentFlag": {
       "type": "boolean"

@@ -28,8 +28,8 @@
       "model": "contact-type"
     },
     "person": {
-      "model": "person",
-      "via": "business_entity_contacts"
+      "via": "business_entity_contacts",
+      "model": "person"
     }
   }
 }

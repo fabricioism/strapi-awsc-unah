@@ -49,24 +49,30 @@
       "type": "datetime"
     },
     "business_entity": {
-      "via": "person",
-      "model": "business-entity"
+      "model": "business-entity",
+      "via": "person"
     },
     "person_phones": {
-      "via": "person",
-      "collection": "person-phone"
+      "collection": "person-phone",
+      "via": "person"
     },
     "email_addresses": {
-      "via": "person",
-      "collection": "email-address"
+      "collection": "email-address",
+      "via": "person"
     },
     "business_entity_contacts": {
-      "via": "person",
-      "collection": "business-entity-contact"
+      "collection": "business-entity-contact",
+      "via": "person"
     },
     "employee": {
-      "via": "person",
-      "model": "employee"
+      "model": "employee",
+      "via": "person"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "PhoneNumber": {
+      "type": "string"
     }
   }
 }

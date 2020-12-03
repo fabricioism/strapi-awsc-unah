@@ -24,8 +24,8 @@
       "unique": true
     },
     "person": {
-      "model": "person",
-      "via": "business_entity"
+      "via": "business_entity",
+      "model": "person"
     },
     "business_entity_contacts": {
       "via": "business_entity",
