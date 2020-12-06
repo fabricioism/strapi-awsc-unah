@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employeedepartmenthistories",
+  "info": {
+    "name": "Employeedepartmenthistory"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "EndDate": {
+      "type": "datetime"
+    },
+    "StartDate": {
+      "type": "datetime"
+    },
+    "department": {
+      "model": "department",
+      "via": "employeedepartmenthistories"
+    },
+    "employee": {
+      "model": "employee",
+      "via": "employeedepartmenthistories"
+    }
+  }
+}

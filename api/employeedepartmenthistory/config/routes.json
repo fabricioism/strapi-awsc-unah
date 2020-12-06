@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/employeedepartmenthistories",
+      "handler": "employeedepartmenthistory.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/employeedepartmenthistories/count",
+      "handler": "employeedepartmenthistory.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/employeedepartmenthistories/:id",
+      "handler": "employeedepartmenthistory.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/employeedepartmenthistories",
+      "handler": "employeedepartmenthistory.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/employeedepartmenthistories/:id",
+      "handler": "employeedepartmenthistory.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/employeedepartmenthistories/:id",
+      "handler": "employeedepartmenthistory.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

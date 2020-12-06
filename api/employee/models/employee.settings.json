@@ -62,10 +62,6 @@
     "CurrentFlag": {
       "type": "boolean"
     },
-    "employee_department_histories": {
-      "via": "employee",
-      "collection": "employee-department-history"
-    },
     "employee_pay_histories": {
       "via": "employee",
       "collection": "employee-pay-history"
@@ -73,6 +69,10 @@
     "job_candidates": {
       "via": "employee",
       "collection": "job-candidate"
+    },
+    "employeedepartmenthistories": {
+      "via": "employee",
+      "collection": "employeedepartmenthistory"
     }
   }
 }
