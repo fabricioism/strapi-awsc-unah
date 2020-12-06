@@ -56,7 +56,7 @@ module.exports = {
     /** Fin Creando el empleado */
 
     if (Object.keys(depto).length) {
-      await strapi.services.employee-department-history.create({employee: entity.id, department: parseInt(depto.value)});
+      await strapi.services.employee_department_history.create({employee: entity.id, department: parseInt(depto.value)});
     }
     return sanitizeEntity(entity, { model: strapi.models.employee });
   },
