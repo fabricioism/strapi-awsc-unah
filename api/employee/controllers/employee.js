@@ -26,6 +26,7 @@ module.exports = {
       VacationHours,
       SickLeaveHours,
       CurrentFlag,
+      depto,
     } = ctx.request.body;
 
     const personData = { FirstName, MiddleName, LastName, PhoneNumber, Email };
@@ -46,7 +47,6 @@ module.exports = {
       VacationHours,
       SickLeaveHours,
       CurrentFlag,
-      depto,
       PersonType: "EM",
       NameStyle: false,
       person: personEntity.id,
