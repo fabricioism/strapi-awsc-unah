@@ -29,10 +29,6 @@
     },
     "ModifiedDate": {
       "type": "datetime"
-    },
-    "employee_department_histories": {
-      "via": "shift",
-      "collection": "employee-department-history"
     }
   }
 }

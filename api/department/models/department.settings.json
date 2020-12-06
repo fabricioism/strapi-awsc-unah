@@ -25,9 +25,9 @@
     "ModifiedDate": {
       "type": "datetime"
     },
-    "employee_department_histories": {
+    "employeedepartmenthistories": {
       "via": "department",
-      "collection": "employee-department-history"
+      "collection": "employeedepartmenthistory"
     }
   }
 }
