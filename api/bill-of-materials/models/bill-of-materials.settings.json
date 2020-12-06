@@ -35,12 +35,12 @@
       "type": "datetime"
     },
     "component_id": {
-      "model": "product",
-      "via": "bill_of_materials_component_ids"
+      "via": "bill_of_materials_component_ids",
+      "model": "product"
     },
     "product_assembly_id": {
-      "model": "product",
-      "via": "bill_of_materials_product_assembly_id"
+      "via": "bill_of_materials_product_assembly_id",
+      "model": "product"
     }
   }
 }

@@ -15,8 +15,8 @@
       "unique": true
     },
     "product": {
-      "model": "product",
-      "via": "transaction_histories"
+      "via": "transaction_histories",
+      "model": "product"
     },
     "ReferenceOrderID": {
       "type": "integer"

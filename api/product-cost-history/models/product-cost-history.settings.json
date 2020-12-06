@@ -23,8 +23,8 @@
       "type": "datetime"
     },
     "product": {
-      "model": "product",
-      "via": "product_cost_histories"
+      "via": "product_cost_histories",
+      "model": "product"
     }
   }
 }
