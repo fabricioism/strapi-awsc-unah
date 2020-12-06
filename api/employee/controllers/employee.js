@@ -46,13 +46,23 @@ module.exports = {
       VacationHours,
       SickLeaveHours,
       CurrentFlag,
+      depto,
       PersonType: "EM",
       NameStyle: false,
       person: personEntity.id,
     };
 
     entity = await strapi.services.employee.create(employeeData);
-    return sanitizeEntity(entity, { model: strapi.models.employee });
     /** Fin Creando el empleado */
+
+    if (Object.keys(depto).length) {
+      (await strapi.services.employee) -
+        department -
+        history.create({
+          employee: entity.id,
+          department: parseInt(depto.value),
+        });
+    }
+    return sanitizeEntity(entity, { model: strapi.models.employee });
   },
 };
