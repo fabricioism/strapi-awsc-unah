@@ -11,8 +11,8 @@
   },
   "attributes": {
     "product": {
-      "model": "product",
-      "via": "product_inventories"
+      "via": "product_inventories",
+      "model": "product"
     },
     "location": {
       "model": "location",

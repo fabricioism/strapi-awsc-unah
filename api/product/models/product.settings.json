@@ -92,32 +92,43 @@
       "via": "products"
     },
     "product_inventories": {
-      "via": "product",
-      "collection": "product-inventory"
+      "collection": "product-inventory",
+      "via": "product"
     },
     "product_cost_histories": {
-      "via": "product",
-      "collection": "product-cost-history"
+      "collection": "product-cost-history",
+      "via": "product"
     },
     "transaction_histories": {
-      "via": "product",
-      "collection": "transaction-history"
+      "collection": "transaction-history",
+      "via": "product"
     },
     "product_list_price_histories": {
-      "via": "product",
-      "collection": "product-list-price-history"
+      "collection": "product-list-price-history",
+      "via": "product"
     },
     "product_reviews": {
-      "via": "product",
-      "collection": "product-review"
+      "collection": "product-review",
+      "via": "product"
     },
     "bill_of_materials_component_ids": {
-      "via": "component_id",
-      "collection": "bill-of-materials"
+      "collection": "bill-of-materials",
+      "via": "component_id"
     },
     "bill_of_materials_product_assembly_id": {
-      "via": "product_assembly_id",
-      "collection": "bill-of-materials"
+      "collection": "bill-of-materials",
+      "via": "product_assembly_id"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

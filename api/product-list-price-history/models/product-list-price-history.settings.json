@@ -21,8 +21,8 @@
       "type": "decimal"
     },
     "product": {
-      "model": "product",
-      "via": "product_list_price_histories"
+      "via": "product_list_price_histories",
+      "model": "product"
     },
     "ModifiedDate": {
       "type": "datetime"
