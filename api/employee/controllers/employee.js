@@ -31,38 +31,6 @@ module.exports = {
       depto,
     } = ctx.request.body;
 
-    /** Actualizando datos de persona */
-    const employeeEntity = await strapi.services.employee.findOne({ id });
-    const personData = {
-      FirstName,
-      MiddleName,
-      LastName,
-      PhoneNumber,
-      Email,
-    };
-
-    console.log("employeeEntity", employeeEntity);
-    console.log("employeeEntity.person", employeeEntity.person);
-    console.log("employeeEntity", employeeEntity.employeedepartmenthistories);
-
-    await strapi.services.person.update(
-      { id: employeeEntity.person.id },
-      personData
-    );
-
-    /** Actualizar departamento */
-    if (Object.keys(depto).length) {
-      let lastDepartment = [
-        ...employeeEntity.employeedepartmenthistories,
-      ].pop();
-      await strapi.services.employeedepartmenthistory.update(
-        {
-          id: lastDepartment.id,
-        },
-        { department: parseInt(depto.value) }
-      );
-    }
-
     /** Actualizando empleado */
     const employeeData = {
       NationalIDNumber,
@@ -81,6 +49,28 @@ module.exports = {
     };
 
     entity = await strapi.services.employee.update({ id }, employeeData);
+
+    /** Actualizando datos de persona */
+    const personData = {
+      FirstName,
+      MiddleName,
+      LastName,
+      PhoneNumber,
+      Email,
+    };
+
+    await strapi.services.person.update({ id: entity.person.id }, personData);
+
+    /** Actualizar departamento */
+    if (Object.keys(depto).length) {
+      let lastDepartment = [...entity.employeedepartmenthistories].pop();
+      await strapi.services.employeedepartmenthistory.update(
+        {
+          id: lastDepartment.id,
+        },
+        { department: parseInt(depto.value) }
+      );
+    }
 
     return sanitizeEntity(entity, { model: strapi.models.employee });
   },
