@@ -7,7 +7,7 @@ const { sanitizeEntity } = require("strapi-utils");
 
 module.exports = {
   /** UPDATE */
-  async PaymentRequestUpdateEvent(ctx) {
+  async update(ctx) {
     const { id } = ctx.params;
 
     let entity;
@@ -45,7 +45,6 @@ module.exports = {
       CurrentFlag,
       PersonType: "EM",
       NameStyle: false,
-      person: personEntity.id,
     };
 
     entity = await strapi.services.employee.update({ id }, employeeData);
@@ -63,13 +62,21 @@ module.exports = {
 
     /** Actualizar departamento */
     if (Object.keys(depto).length) {
-      let lastDepartment = [...entity.employeedepartmenthistories].pop();
-      await strapi.services.employeedepartmenthistory.update(
-        {
-          id: lastDepartment.id,
-        },
-        { department: parseInt(depto.value) }
-      );
+      let lastDepartment = [...entity.employeedepartmenthistories];
+      if (lastDepartment.length) {
+        let { id: rowId } = lastDepartment.pop();
+        await strapi.services.employeedepartmenthistory.update(
+          {
+            id: rowId,
+          },
+          { department: parseInt(depto.value) }
+        );
+      } else {
+        await strapi.services.employeedepartmenthistory.create({
+          employee: entity.id,
+          department: parseInt(depto.value),
+        });
+      }
     }
 
     return sanitizeEntity(entity, { model: strapi.models.employee });
