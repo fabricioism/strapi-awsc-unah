@@ -42,6 +42,8 @@ module.exports = {
     };
 
     console.log("employeeEntity", employeeEntity);
+    console.log("employeeEntity.person", employeeEntity.person);
+    console.log("employeeEntity", employeeEntity.employeedepartmenthistories);
 
     await strapi.services.person.update(
       { id: employeeEntity.person.id },
