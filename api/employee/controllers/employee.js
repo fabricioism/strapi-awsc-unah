@@ -6,6 +6,79 @@ const { sanitizeEntity } = require("strapi-utils");
  */
 
 module.exports = {
+  /** UPDATE */
+  async PaymentRequestUpdateEvent(ctx) {
+    const { id } = ctx.params;
+
+    let entity;
+
+    const {
+      FirstName,
+      MiddleName,
+      LastName,
+      Email,
+      PhoneNumber,
+      NationalIDNumber,
+      JobTitle,
+      BirthDate,
+      MaritalStatus,
+      Gender,
+      HireDate,
+      SalariedFlag,
+      VacationHours,
+      SickLeaveHours,
+      CurrentFlag,
+      depto,
+    } = ctx.request.body;
+
+    /** Actualizando datos de persona */
+    const {
+      person,
+      employeedepartmenthistories,
+    } = await strapi.services.employee.findOne({ id });
+    const personData = {
+      FirstName,
+      MiddleName,
+      LastName,
+      PhoneNumber,
+      Email,
+    };
+
+    await strapi.services.person.update({ id: person.id }, personData);
+
+    /** Actualizar departamento */
+    if (Object.keys(depto).length) {
+      let lastDepartment = [...employeedepartmenthistories].pop();
+      await strapi.services.employeedepartmenthistory.update(
+        {
+          id: lastDepartment.id,
+        },
+        { department: parseInt(depto.value) }
+      );
+    }
+
+    /** Actualizando empleado */
+    const employeeData = {
+      NationalIDNumber,
+      JobTitle,
+      BirthDate,
+      MaritalStatus,
+      Gender,
+      HireDate,
+      SalariedFlag,
+      VacationHours,
+      SickLeaveHours,
+      CurrentFlag,
+      PersonType: "EM",
+      NameStyle: false,
+      person: personEntity.id,
+    };
+
+    entity = await strapi.services.employee.update({ id }, employeeData);
+
+    return sanitizeEntity(entity, { model: strapi.models.employee });
+  },
+
   /**CREATE */
   async create(ctx) {
     let entity;
