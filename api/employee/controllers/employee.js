@@ -61,22 +61,20 @@ module.exports = {
     await strapi.services.person.update({ id: entity.person.id }, personData);
 
     /** Actualizar departamento */
-    if (Object.keys(depto).length) {
-      let lastDepartment = [...entity.employeedepartmenthistories];
-      if (lastDepartment.length) {
-        let { id: rowId } = lastDepartment.pop();
-        await strapi.services.employeedepartmenthistory.update(
-          {
-            id: rowId,
-          },
-          { department: parseInt(depto.value) }
-        );
-      } else {
-        await strapi.services.employeedepartmenthistory.create({
-          employee: entity.id,
-          department: parseInt(depto.value),
-        });
-      }
+    let lastDepartment = [...entity.employeedepartmenthistories];
+    if (lastDepartment.length) {
+      let { id: rowId } = lastDepartment.pop();
+      await strapi.services.employeedepartmenthistory.update(
+        {
+          id: rowId,
+        },
+        { department: parseInt(depto) }
+      );
+    } else {
+      await strapi.services.employeedepartmenthistory.create({
+        employee: entity.id,
+        department: parseInt(depto),
+      });
     }
 
     return sanitizeEntity(entity, { model: strapi.models.employee });
@@ -131,12 +129,10 @@ module.exports = {
     entity = await strapi.services.employee.create(employeeData);
     /** Fin Creando el empleado */
 
-    if (Object.keys(depto).length) {
-      await strapi.services.employeedepartmenthistory.create({
-        employee: entity.id,
-        department: parseInt(depto.value),
-      });
-    }
+    await strapi.services.employeedepartmenthistory.create({
+      employee: entity.id,
+      department: parseInt(depto),
+    });
     return sanitizeEntity(entity, { model: strapi.models.employee });
   },
 };
