@@ -32,10 +32,7 @@ module.exports = {
     } = ctx.request.body;
 
     /** Actualizando datos de persona */
-    const {
-      person,
-      employeedepartmenthistories,
-    } = await strapi.services.employee.findOne({ id });
+    const employeeEntity = await strapi.services.employee.findOne({ id });
     const personData = {
       FirstName,
       MiddleName,
@@ -44,11 +41,20 @@ module.exports = {
       Email,
     };
 
-    await strapi.services.person.update({ id: person.id }, personData);
+    console.log("employeeEntity", employeeEntity);
+    console.log("employeeEntity.person", employeeEntity.person);
+    console.log("employeeEntity", employeeEntity.employeedepartmenthistories);
+
+    await strapi.services.person.update(
+      { id: employeeEntity.person.id },
+      personData
+    );
 
     /** Actualizar departamento */
     if (Object.keys(depto).length) {
-      let lastDepartment = [...employeedepartmenthistories].pop();
+      let lastDepartment = [
+        ...employeeEntity.employeedepartmenthistories,
+      ].pop();
       await strapi.services.employeedepartmenthistory.update(
         {
           id: lastDepartment.id,
